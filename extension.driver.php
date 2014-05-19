@@ -83,7 +83,7 @@
 				// add buttons
 				$li = new XMLelement('li', null, array('class' => 'entry-nav'));
 
-				if( $prev_id !== $entry_id )
+				if( $prev_id !== $entry_id && $prev_id !='')
 					$li->appendChild( Widget::Anchor(
 						__( '&larr; Previous' ),
 						SYMPHONY_URL.$callback['pageroot'].'edit/'.$prev_id,
@@ -93,7 +93,7 @@
 						array('accesskey' => 'z')
 					) );
 
-				if( $next_id !== $entry_id )
+				if( $next_id !== $entry_id && $next_id !='')
 					$li->appendChild( Widget::Anchor(
 						__( 'Next &rarr;' ),
 						SYMPHONY_URL.$callback['pageroot'].'edit/'.$next_id,
